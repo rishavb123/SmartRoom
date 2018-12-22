@@ -1,0 +1,29 @@
+{
+    "name": "smart-room-electron-app",
+    "version": "1.0.0",
+    "description": "This is the electron app that the Smart Room application will run through",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rishavb123/SmartRoom.git"
+    },
+    "keywords": [
+        "Smart",
+        "Home",
+        "Room"
+    ],
+    "author": "Rishav Bhagat",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rishavb123/SmartRoom/issues"
+    },
+    "homepage": "https://github.com/rishavb123/SmartRoom#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "electron": "^4.0.0"
+    }
+}
