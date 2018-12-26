@@ -10,11 +10,11 @@ class App extends Component {
             let lights_url = "http://localhost:8000/lights?admin_key=" + key;
             let thermostat_url = "http://localhost:8000/themostat?admin_key=" + key;
 
-            if (text.includes("lights") && text.includes("on")) {
+            if (text.includes("light") && text.includes("on")) {
                 axios.get(lights_url + "&state=on").then(response => console.log(response));
-            } else if (text.includes("lights") && text.includes("off")) {
+            } else if (text.includes("light") && text.includes("off")) {
                 axios.get(lights_url + "&state=off").then(response => console.log(response));
-            } else if (text.includes("lights") && (text.includes("switch") || text.includes("toggle"))) {
+            } else if (text.includes("light") && (text.includes("switch") || text.includes("toggle") || text.includes("hit"))) {
                 axios.get(lights_url + "&state=toggle").then(response => console.log(response));
             }
 
