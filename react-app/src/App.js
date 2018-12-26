@@ -7,17 +7,18 @@ const key = "blueberrypineapplecactikoi1025";
 class App extends Component {
   componentDidMount()
   {
-    const onFinalised = text => {
+    const onFinalised = textCased => {
       let url = "http://localhost:8000/lights?admin_key="+key;
-      if(text.includes("lights") && text.includes("on"))
+      let text = textCased.toLowerCase();
+      if(text.includes("light") && text.includes("on"))
       {
         axios.get(url+"&state=on").then(response => console.log(response));
       }
-      else if(text.includes("lights") && text.includes("off"))
+      else if(text.includes("light") && text.includes("off"))
       {
         axios.get(url+"&state=off").then(response => console.log(response));
       }
-      else if(text.includes("lights") && (text.includes("switch") || text.includes("toggle")))
+      else if(text.includes("light") && (text.includes("switch") || text.includes("toggle") || text.includes("hit")))
       {
         axios.get(url+"&state=toggle").then(response => console.log(response));
       }
