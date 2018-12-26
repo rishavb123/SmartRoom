@@ -8,7 +8,7 @@ class App extends Component {
     componentDidMount() {
         const onFinalised = text => {
             let lights_url = "http://localhost:8000/lights?admin_key=" + key;
-            let thermostat_url = "http://localhost:8000/themostat?admin_key=" + key;
+            let thermostat_url = "http://localhost:8000/therostat?admin_key=" + key;
 
             if (text.includes("light") && text.includes("on")) {
                 axios.get(lights_url + "&state=on").then(response => console.log(response));
