@@ -1,0 +1,29 @@
+{
+  "name": "smartroom",
+  "version": "1.0.0",
+  "description": "a program to control the smart devices in my house by connecting to the home server",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishavb123/SmartRoom.git"
+  },
+  "keywords": [
+    "smart",
+    "room",
+    "devices",
+    "server",
+    "home"
+  ],
+  "author": "bhagat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishavb123/SmartRoom/issues"
+  },
+  "homepage": "https://github.com/rishavb123/SmartRoom#readme",
+  "dependencies": {
+    "google-tts-api": "0.0.4"
+  }
+}
