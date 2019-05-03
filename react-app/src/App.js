@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import SpeechToText from 'speech-to-text';
 import axios from 'axios'
 
-import Speech from 'speak-tts'
+import Speech from 'speak-tts';
+import Sound from 'react-sound';
 
 const speech = new Speech();
 
@@ -93,12 +94,15 @@ class App extends Component {
                 this.onFinalised(this.refs.input.value);
                 this.refs.input.value = "";
             }}>Submit</button>
+
             <button onClick={() => {
                 console.log("has support: " + speech.hasBrowserSupport());
             }}>Log Support</button>
             <button onClick={() => {
                 this.say("Testing Testing. Can you here me? Is this on?");
             }}>Say Test</button>
+          <Sound url="../tts/lights.mp3"
+      playStatus={Sound.status.PLAYING} />
           </div>
         );
     }
