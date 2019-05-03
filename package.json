@@ -4,7 +4,8 @@
   "description": "a program to control the smart devices in my house by connecting to the home server",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sh start.sh"
   },
   "repository": {
     "type": "git",
