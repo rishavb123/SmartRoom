@@ -52,7 +52,7 @@ class App extends Component {
     };
 
     componentDidMount() {
-        speech.init({
+        const config = {
             'volume': 1,
              'lang': 'en-GB',
              'rate': 1,
@@ -64,7 +64,8 @@ class App extends Component {
                      console.log("Event voiceschanged", voices)
                  }
              }
-        })
+        }
+        speech.init(config);
         this.listener = new SpeechToText(this.onFinalised, this.onEndEvent, this.onAnythingSaid);
         this.startListening();
     }
@@ -92,6 +93,12 @@ class App extends Component {
                 this.onFinalised(this.refs.input.value);
                 this.refs.input.value = "";
             }}>Submit</button>
+            <button onClick={() => {
+                console.log("has support: " + speech.hasBrowserSupport());
+            }}>Log Support</button>
+            <button onClick={() => {
+                this.say("Testing Testing. Can you here me? Is this on?");
+            }}>Say Test</button>
           </div>
         );
     }

@@ -1,2 +1,2 @@
 cd react-app/build
-xdg-open http://localhost:5001 & serve -p 5001
+chromium localhost:3000 --enable-speech-dispatcher & serve -p 5001
